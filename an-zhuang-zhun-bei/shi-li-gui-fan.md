@@ -6,11 +6,11 @@
 
 | 机器ip | docker ip | 用途 | 需要安装 |
 | :--- | :--- | :--- | :--- |
-| 172.17.87.35 | 10.244.0.1 | k8s master（yum源服务器） | docker,kubernetes-master |
-| 172.17.87.36 | 10.244.0.2 | k8s node | docker,kubernetes-node |
-| 172.17.87.37 | 10.244.0.3 | k8s node | docker,kubernetes-node |
-| 172.17.87.19 | 10.244.0.4 | 镜像仓库 | docker |
-| 172.17.87.20 | —— | 存储服务器 | nfs-utils |
+| 172.17.87.35 | 10.244.0.1 | k8s master（yum源服务器）  | docker,kubernetes-master |
+| 172.17.87.36 | 10.244.0.2 | k8s node  | docker,kubernetes-node |
+| 172.17.87.37 | 10.244.0.3 | k8s node  | docker,kubernetes-node |
+| 172.17.87.19 | 10.244.0.4 | 镜像仓库  | docker |
+| 172.17.87.20 | —— | 存储服务器  | nfs-utils |
 
 #### **应用IP段规划**
 
