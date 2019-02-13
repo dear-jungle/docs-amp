@@ -9,7 +9,7 @@
   * [本地yum源搭建](an-zhuang-bu-zou/ben-di-yum-yuan-da-jian.md)
   * [docker安装](an-zhuang-bu-zou/dockeran-zhuang.md)
   * [镜像仓库](an-zhuang-bu-zou/jing-xiang-cang-ku.md)
-  * kubernetes安装
+  * [kubernetes安装](an-zhuang-bu-zou/kubernetesan-zhuang.md)
   * [nfs存储服务部署](an-zhuang-bu-zou/nfsfu-wu-bu-shu.md)
 * [卸载](xie-zai.md)
   * 卸载云平台
