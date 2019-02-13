@@ -139,15 +139,15 @@ $ docker-compose up -d
 1. 去掉docker配置文件中的**--insecure-registry**配置（如果修改了配置文件需要重启docker）
 2. 新建目录
    ```
-   mkdir /etc/docker/certs.d/{HARBORIP}
+   $ mkdir /etc/docker/certs.d/{HARBORIP}
    ```
 3. 将ca.crt拷贝到新建的目录下
    ```
-   # scp ca.crt root@172.17.80.88:/etc/docker/certs.d/{harborip}/
+   $ scp root@{HARBORIP}:/root/ca.crt /etc/docker/certs.d/{harborip}/
    ```
 4. 登录验证
    ```
-    docker login {harborip}
+   $ docker login {harborip}
    ```
 
 
