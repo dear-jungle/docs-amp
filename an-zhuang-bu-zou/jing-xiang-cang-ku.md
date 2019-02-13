@@ -1,7 +1,5 @@
 ### 镜像仓库安装
 
-> 参考“镜像仓库安装”章节部署的镜像仓库需要重启docker进程以实现https认证。本章与“镜像仓库安装”章节在生成harbor https证书上有所不同，且docker login时不需要重启docker进程就可以实现镜像仓库的https认证。
-
 #### 安装前准备
 
 安装镜像仓库之前需要确认：
@@ -11,7 +9,7 @@
 * harbor的存储目录（默认/data）有足够的硬盘空间
 * 已经关闭防火墙和selinux
 
-安装所需资源：docker.tar  harbor.tar
+安装所需资源：docker.tar、harbor.tar、docker-compose 
 
 #### **安装docker-compose**
 

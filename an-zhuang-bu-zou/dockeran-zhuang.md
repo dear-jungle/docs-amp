@@ -1,6 +1,13 @@
 ### docker安装
+#### 安装前准备
 
-##### 无外网yum安装：
+安装docker之前需要完成本地yum源搭建。
+
+安装所需资源：本地yum源，初始化配置脚本install-docker.sh。
+
+
+
+#### docker离线安装
 
 ```
 $  yum -y install docker-engine --enablerepo=c2cloud
@@ -8,7 +15,13 @@ $  yum -y install docker-engine --enablerepo=c2cloud
 
 > 此方式为离线yum安装，如何安装离线yum源，请参见本地yum仓库搭建
 
-##### docker ip修改（可选）
+**优化配置**
+
+```
+sh install-docker.sh
+```
+
+##### docker虚拟ip修改（可选）
 
 > docker安装完成后， 用 $ ip route show 查看docker0网段，如果和宿主机局域网段冲突，可以对其进行修改。这里按照示例安装规划进行配置，例如，添加bip属性 --bip=10.1.40.1/16
 
@@ -27,7 +40,6 @@ ExecStart=/usr/bin/dockerd $OPTIONS \
    # cp ca.crt /etc/docker/certs.d/{harborip}/
    ```
 
-
 #### **安装完成后检查**
 
 1.检查docker已安装且版本正确
@@ -35,12 +47,23 @@ ExecStart=/usr/bin/dockerd $OPTIONS \
 ```
 # docker version
 Client:
- Version:      1.13.1
- API version:  1.26
- Go version:   go1.7.5
- Git commit:   092cba3
- Built:        Wed Feb  8 06:38:28 2017
- OS/Arch:      linux/amd64
+ Version:           18.06.1-ce
+ API version:       1.38
+ Go version:        go1.10.3
+ Git commit:        e68fc7a
+ Built:             Tue Aug 21 17:23:03 2018
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server:
+ Engine:
+  Version:          18.06.1-ce
+  API version:      1.38 (minimum version 1.12)
+  Go version:       go1.10.3
+  Git commit:       e68fc7a
+  Built:            Tue Aug 21 17:25:29 2018
+  OS/Arch:          linux/amd64
+  Experimental:     false
 ```
 
 2.检查docker存储驱动配置正确
@@ -48,8 +71,10 @@ Client:
 ```
 # docker info
 //有如下信息表示存储配置正确
-Storage Driver: devicemapper
-Pool Name: docker-thinpool
+ Storage Driver: overlay2
+  Backing Filesystem: xfs
+  Supports d_type: true
+  Native Overlay Diff: true
 ```
 
 3.检查docker正常运行
