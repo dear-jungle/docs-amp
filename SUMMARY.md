@@ -15,4 +15,5 @@
   * 卸载云平台
 * [其他](qi-ta.md)
   * [时间同步服务配置](qi-ta/shi-jian-tong-bu-fu-wu-da-jian.md)
+  * [主机配置静态IP](qi-ta/zhu-ji-pei-zhi-jing-tai-ip.md)
 

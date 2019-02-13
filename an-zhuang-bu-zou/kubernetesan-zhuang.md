@@ -5,7 +5,7 @@
 安装前请确认：
 
 * 已经安装本地yum源
-* 已经设置为静态网络（[如何设置](/an-zhuang-bu-zou/lu-you-bu-shu.md)）
+* 已经设置静态IP（[如何设置](/an-zhuang-bu-zou/lu-you-bu-shu.md)）
 * 已经安装docker环境
 
 安装kubernetes1.5.3所需资源：kube.tar
