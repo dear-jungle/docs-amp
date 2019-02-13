@@ -146,10 +146,9 @@ $ docker-compose up -d
    # scp ca.crt root@172.17.80.88:/etc/docker/certs.d/{harborip}/
    ```
 4. 登录验证
-
-```
-docker login {harborip}
-```
+   ```
+    docker login {harborip}
+   ```
 
 
 
