@@ -6,7 +6,7 @@
   * [示例规范](an-zhuang-zhun-bei/shi-li-gui-fan.md)
   * [部署清单](an-zhuang-zhun-bei/bu-shu-qing-dan.md)
 * [安装步骤](an-zhuang-bu-zou.md)
-  * 镜像仓库
+  * [镜像仓库](an-zhuang-bu-zou/jing-xiang-cang-ku.md)
   * docker安装
   * kubernetes安装
   * [nfs存储服务部署](an-zhuang-bu-zou/nfsfu-wu-bu-shu.md)
