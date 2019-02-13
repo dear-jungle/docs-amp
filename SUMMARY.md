@@ -4,7 +4,7 @@
 * [安装准备](an-zhuang-zhun-bei.md)
   * [配置要求](an-zhuang-zhun-bei/pei-zhi-yao-qiu.md)
   * [示例规范](an-zhuang-zhun-bei/shi-li-gui-fan.md)
-  * 部署清单
+  * [部署清单](an-zhuang-zhun-bei/bu-shu-qing-dan.md)
 * [安装步骤](an-zhuang-bu-zou.md)
   * 镜像仓库
   * docker安装
