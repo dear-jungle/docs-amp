@@ -139,7 +139,7 @@ $ docker-compose up -d
 1. 去掉docker配置文件中的**--insecure-registry**配置（如果修改了配置文件需要重启docker）
 2. 新建目录
    ```
-    mkdir /etc/docker/certs.d/{HARBORIP}
+   mkdir /etc/docker/certs.d/{HARBORIP}
    ```
 3. 将ca.crt拷贝到新建的目录下
    ```
