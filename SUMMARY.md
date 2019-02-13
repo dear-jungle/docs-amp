@@ -1,3 +1,18 @@
 # Summary
 
-* [First Chapter](chapter1.md)
+* [简介](README.md)
+* [安装准备](an-zhuang-zhun-bei.md)
+  * [配置要求](an-zhuang-zhun-bei/pei-zhi-yao-qiu.md)
+  * [示例规范](an-zhuang-zhun-bei/shi-li-gui-fan.md)
+  * 部署清单
+* [安装步骤](an-zhuang-bu-zou.md)
+  * 镜像仓库
+  * docker安装
+  * kubernetes安装
+  * [nfs存储服务部署](an-zhuang-bu-zou/nfsfu-wu-bu-shu.md)
+* [卸载](xie-zai.md)
+  * 卸载云平台
+* [其他](qi-ta.md)
+  * 本地yum源搭建
+  * [时间同步服务配置](qi-ta/shi-jian-tong-bu-fu-wu-da-jian.md)
+
