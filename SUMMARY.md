@@ -7,7 +7,7 @@
   * [部署清单](an-zhuang-zhun-bei/bu-shu-qing-dan.md)
 * [安装步骤](an-zhuang-bu-zou.md)
   * [镜像仓库](an-zhuang-bu-zou/jing-xiang-cang-ku.md)
-  * docker安装
+  * [docker安装](an-zhuang-bu-zou/dockeran-zhuang.md)
   * kubernetes安装
   * [nfs存储服务部署](an-zhuang-bu-zou/nfsfu-wu-bu-shu.md)
 * [卸载](xie-zai.md)
