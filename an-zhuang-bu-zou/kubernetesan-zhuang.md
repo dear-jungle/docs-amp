@@ -8,7 +8,7 @@
 * 已经设置静态IP（[如何设置](/an-zhuang-bu-zou/lu-you-bu-shu.md)）
 * 已经安装docker环境
 
-安装kubernetes1.5.3所需资源：kube.tar
+安装kubernetes1.10.0所需资源：kube.tar
 
 > kubernetes是部署应用集成平台的基础架构，有很多节点，可横向扩展。部署需要多台机器，且需要指定其中一台作为管理节点，其余作为计算节点，具体可以参见[示例规划](/an-zhuang-zhun-bei/shi-li-gui-fan.md)章节。
 

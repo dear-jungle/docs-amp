@@ -1,13 +1,12 @@
 ### docker安装
+
 #### 安装前准备
 
-* 安装主机操作系统必须是CentOS Linux release 7.4/7.5，内核版本必须3.10.0-514.el7.x86_64及以上。
+* 安装主机操作系统必须是CentOS Linux release 7.4/7.5，内核版本必须3.10.0-514.el7.x86\_64及以上。
 
 * 安装docker之前需要完成本地yum源搭建。
 
 * 安装所需资源：本地yum源，初始化配置脚本install-docker.sh。
-
-
 
 #### docker离线安装
 
@@ -15,7 +14,7 @@
 $  yum -y install docker-engine --enablerepo=c2cloud
 ```
 
-> 此方式为离线yum安装，如何安装离线yum源，请参见本地yum源搭建
+> 此方式为离线yum安装，如何安装离线yum源，请参见[本地yum源搭建](/an-zhuang-bu-zou/ben-di-yum-yuan-da-jian.md)
 
 **优化配置**
 

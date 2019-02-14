@@ -4,12 +4,12 @@
 
 安装镜像仓库之前需要确认：
 
-* 已经安装docker环境，docker安装过程[参见这里](/an-zhuang-bu-zou/docker1131an-zhuang.md)
+* 已经安装docker环境，docker安装过程[参见这里](/an-zhuang-bu-zou/dockeran-zhuang.md)
 * 已经安装docker-compose
 * harbor的存储目录（默认/data）有足够的硬盘空间
 * 已经关闭防火墙和selinux
 
-安装所需资源：docker.tar、harbor.tar、docker-compose 
+安装所需资源：docker.tar、harbor.tar、docker-compose
 
 #### **安装docker-compose**
 
