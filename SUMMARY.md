@@ -12,7 +12,7 @@
   * [kubernetes安装](an-zhuang-bu-zou/kubernetesan-zhuang.md)
   * [nfs存储服务部署](an-zhuang-bu-zou/nfsfu-wu-bu-shu.md)
 * [卸载](xie-zai.md)
-  * 卸载云平台
+  * [卸载云平台](xie-zai/xie-zai-yun-ping-tai.md)
 * [其他](qi-ta.md)
   * [时间同步服务配置](qi-ta/shi-jian-tong-bu-fu-wu-da-jian.md)
   * [主机配置静态IP](qi-ta/zhu-ji-pei-zhi-jing-tai-ip.md)
