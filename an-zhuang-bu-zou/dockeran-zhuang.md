@@ -11,16 +11,10 @@
 #### docker离线安装
 
 ```
-$  yum -y install docker-engine --enablerepo=c2cloud
+$  sh install-docker.sh
 ```
 
 > 此方式为离线yum安装，如何安装离线yum源，请参见[本地yum源搭建](/an-zhuang-bu-zou/ben-di-yum-yuan-da-jian.md)
-
-**优化配置**
-
-```
-sh install-docker.sh
-```
 
 ##### docker虚拟ip修改（可选）
 
