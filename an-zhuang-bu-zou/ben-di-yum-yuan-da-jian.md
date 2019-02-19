@@ -7,27 +7,26 @@
 ##### 1.在服务器上创建目录
 
 ```
-# mkdir /opt/c2cloud
+# mkdir -p /var/www/html/
 ```
 
 ##### 2.解压yum.tar
 
 ```
-# cd  /opt/c2cloud
-# tar -zxvf repository.tar.gz
+# cd  /var/www/html/
+# tar -zxvf CentOS.tar.gz
 ```
 
 ##### 3.配置本地yum源
 
 ```
 # vi /etc/yum.repos.d/local.repo
-//添加如下内容
-[tools] 
-name=tools
-baseurl=file:/opt/c2cloud/repository/
-enabled=1 
-gpgcheck=0 
-priority=1
+//添加如下内容，请把IP替换为本机IP
+[local]
+name=local_repo
+baseurl=http://IP/CentOS7.2/
+enabled=1
+gpgcheck=0
 ```
 
 #### **安装配置相关软件**
@@ -46,8 +45,9 @@ priority=1
 
 ```
 # vi /etc/httpd/conf/httpd.conf 
-//修改httpd服务端口为8090
-Listen 8090
+//修改httpd服务端口为20000
+Listen 20000
+ServerName 20000
 ```
 
 新建仓库访问地址
@@ -77,7 +77,11 @@ Listen 20000
 # systemctl enable httpd.service
 ```
 
-##### 4.在仓库中新放置rpm包
+##### 4.在仓库中新放置rpm包（可选）
+
+> ```
+> 必要的安装包都已经内置，如果需要加入新的RPM包可以执行下面步骤
+> ```
 
 ```
 //创建存放rpm包的路径。一定是两层级xxx/packages，xxx可以自己命名
