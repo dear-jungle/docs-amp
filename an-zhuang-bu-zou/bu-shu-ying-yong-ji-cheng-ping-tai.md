@@ -108,10 +108,6 @@ dict_images=registry.c2cloud.cn/c2cloud/dict-server:v1.1
    $kubectl get svc -n=admin
 ```
 
-##### ![](/assets/import2.png)
-
-##### ![](/assets/import3.png)
-
 ##### 7.生成部署脚本
 
 ```
