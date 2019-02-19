@@ -11,6 +11,7 @@
   * [docker安装](an-zhuang-bu-zou/dockeran-zhuang.md)
   * [镜像仓库](an-zhuang-bu-zou/jing-xiang-cang-ku.md)
   * [kubernetes安装](an-zhuang-bu-zou/kubernetesan-zhuang.md)
+  * [部署应用集成平台](an-zhuang-bu-zou/bu-shu-ying-yong-ji-cheng-ping-tai.md)
 * [卸载](xie-zai.md)
   * [卸载云平台](xie-zai/xie-zai-yun-ping-tai.md)
 * [其他](qi-ta.md)

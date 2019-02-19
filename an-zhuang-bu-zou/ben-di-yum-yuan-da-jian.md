@@ -58,8 +58,8 @@ ServerName 20000
 
 Listen 20000
 <VirtualHost *:20000>
-   Alias /c2cloud_repo /opt/c2cloud/repository
-   <Directory /opt/c2cloud/repository>
+   Alias /c2cloud_repo /var/www/html/CentOS7.2/repository
+   <Directory /var/www/html/CentOS7.2/repository>
       Options Indexes MultiViews FollowSymLinks
       Allow from all
       AllowOverride None
@@ -85,11 +85,9 @@ Listen 20000
 
 ```
 //创建存放rpm包的路径。一定是两层级xxx/packages，xxx可以自己命名
-# cd /opt/c2cloud/repository
-# mkdir xxx
-# mkdir xxx/packages
+# cd /var/www/html/CentOS7.2/repository
+# mkdir -p xxx/packages
 //将需要的rpm包放到xxx/packages目录下后，使包生效
-# cd /opt/c2cloud/repository/
 # ./build_repo.sh
 ```
 

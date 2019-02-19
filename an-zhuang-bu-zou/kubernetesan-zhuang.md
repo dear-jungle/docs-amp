@@ -8,40 +8,33 @@
 * 已经设置静态IP（[如何设置](/an-zhuang-bu-zou/lu-you-bu-shu.md)）
 * 已经安装docker环境
 
-安装kubernetes1.10.0所需资源：kube.tar
+安装kubernetes1.10.0所需资源：install.tar.gz
 
 > kubernetes是部署应用集成平台的基础架构，有很多节点，可横向扩展。部署需要多台机器，且需要指定其中一台作为管理节点，其余作为计算节点，具体可以参见[示例规划](/an-zhuang-zhun-bei/shi-li-gui-fan.md)章节。
 
 #### **部署管理\(master\)节点**
 
-##### 1.解压kube.tar
+##### 1.解压install.tar.gz
 
 ```
 $ cd /opt
-$ tar -xzvf kube.tar
+$ tar -xzvf install.tar.gz
 ```
 
 ##### 2.执行intall-master.sh
 
 ```
-$ cd kube
-$ chmod +x install-master.sh
-$ sh install-master.sh ip   #ip为本机ip
+$ cd install
+$ sh new-install-master.sh ip   #ip为本机ip
 ```
 
-##### 3.创建服务用户
+##### 3.启动集群网络
 
 ```
-$ kubectl create sa weave-net -n=kube-system
+$ kubectl create -f  kube-flannel.yml
 ```
 
-##### 4.启动集群网络
-
-```
-$ kubectl create -f weave-kube-2.0.4.yaml
-```
-
-##### 5.设置DNS
+##### 4.设置DNS
 
 ```
 $ vi /etc/resolv.conf
@@ -90,26 +83,25 @@ PING kubernetes.default.svc.cluster.local (10.96.0.1) 56(84) bytes of data.
 
 #### **部署计算（node）节点**
 
-##### 1.解压kube.tar
+##### 1.解压install.tar.gz
 
 ```
 $ cd /opt
-$ tar -xzvf kube.tar
+$ tar -xzvf install.tar.gz
 ```
 
 ##### 2.在主节点上获取准入token
 
 ```
-$ kubectl -n kube-system get secret clusterinfo -o yaml | grep token-map | awk '{print $2}' | base64 -d | sed "s|{||g;s|}||g;s|:|.|g;s/\"//g;" | xargs echo
+$  kubeadm token list
 ```
 
 ##### 3.执行intall-master.sh
 
 ```
-$ cd kube
-$ chmod +x install-node.sh
-#token 为第二步结果，ip为本机ip，master-ip为部署管理节点机器IP
-$ sh install-node.sh token ip master-ip
+$ cd install
+#token 为第二步执行结果，ip为本机ip，master-ip为部署管理节点机器IP
+$ sh  new-install-node.sh token ip master-ip
 ```
 
 #### **安装完成后检查**

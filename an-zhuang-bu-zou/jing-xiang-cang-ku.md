@@ -9,7 +9,7 @@
 * harbor的存储目录（默认/data）有足够的硬盘空间
 * 已经关闭防火墙和selinux
 
-安装所需资源：docker.tar、harbor.tar、docker-compose
+安装所需资源：harbor.tar、docker-compose
 
 #### **安装docker-compose**
 
