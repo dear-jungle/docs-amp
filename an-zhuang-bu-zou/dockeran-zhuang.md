@@ -6,12 +6,22 @@
 
 * 安装docker之前需要完成本地yum源搭建。
 
-* 安装所需资源：本地yum源，初始化配置脚本install-docker.sh。
+* 安装所需资源：install.tar.gz。
 
 #### docker离线安装
 
+##### 1.解压install.tar.gz
+
 ```
-$  sh install-docker.sh
+$ cd /opt
+$ tar -xzvf install.tar.gz
+```
+
+##### 2.执行docker18-install.sh
+
+```
+$ cd install
+$ sh docker18-install.sh
 ```
 
 > 此方式为离线yum安装，如何安装离线yum源，请参见[本地yum源搭建](/an-zhuang-bu-zou/ben-di-yum-yuan-da-jian.md)
