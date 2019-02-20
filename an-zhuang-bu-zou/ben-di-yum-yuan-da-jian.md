@@ -50,24 +50,6 @@ Listen 20000
 ServerName 20000
 ```
 
-新建仓库访问地址
-
-```
-# vi /etc/httpd/conf.d/c2cloud_repo.conf 
-//创建一个c2cloud_repo.conf文件，内容如下：
-
-Listen 20000
-<VirtualHost *:20000>
-   Alias /c2cloud_repo /var/www/html/CentOS7.2/repository
-   <Directory /var/www/html/CentOS7.2/repository>
-      Options Indexes MultiViews FollowSymLinks
-      Allow from all
-      AllowOverride None
-      Require all granted
-   </Directory>
-</VirtualHost>
-```
-
 ##### 3.启动
 
 ```

@@ -28,12 +28,23 @@ $ sh docker18-install.sh
 
 ##### docker虚拟ip修改（可选）
 
-> docker安装完成后， 用 $ ip route show 查看docker0网段，如果和宿主机局域网段冲突，可以对其进行修改。这里按照示例安装规划进行配置，例如，添加bip属性 --bip=10.1.40.1/16
+> docker安装完成后， 用 $ ip route show 查看docker0网段，如果和宿主机局域网段冲突，可以对其进行修改。这里按照示例安装规划进行配置，例如，添加bip属性 --bip=10.244.0.1/16
 
 ```
-$ vi /usr/lib/systemd/system/docker.service
-ExecStart=/usr/bin/dockerd $OPTIONS \
-  --bip=192.168.1.1/16
+$ vi /ect/docker/daemon.json
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2",
+  "storage-opts": [
+    "overlay2.override_kernel_check=true"
+  ],
+  "bip": "10.244.0.1/16"
+}
+
 ```
 
 #### 设置docker可访问镜像仓库
