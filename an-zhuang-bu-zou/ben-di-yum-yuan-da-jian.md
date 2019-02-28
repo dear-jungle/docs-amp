@@ -18,6 +18,31 @@
 ```
 
 ##### 3.配置本地yum源
+关闭selinux,将SELINUX设置为disabled
+```
+setenforce 0
+vi /etc/selinux/config
+
+# This file controls the state of SELinux on the system.
+# SELINUX= can take one of these three values:
+#     enforcing - SELinux security policy is enforced.
+#     permissive - SELinux prints warnings instead of enforcing.
+#     disabled - No SELinux policy is loaded.
+SELINUX=disabled
+# SELINUXTYPE= can take one of three two values:
+#     targeted - Targeted processes are protected,
+#     minimum - Modification of targeted policy. Only selected processes are protected.
+#     mls - Multi Level Security protection.
+SELINUXTYPE=targeted
+```
+
+vi /etc/selinux/config
+
+离线环境需要先移除系统yum源配置
+```
+mkdir -p /etc/yum.repo/bak
+mv /etc/yum.repo/Centos* /etc/yum.repo/bak/
+```
 
 ```
 # vi /etc/yum.repos.d/local.repo
@@ -84,12 +109,12 @@ ServerName 20000
 `/etc/yum.repos.d/`目录下配置`c2cloud`仓库配置文件：
 
 ```
-# vi c2cloud.repo 
-[c2cloud]
-name = c2cloud
-baseurl = http://172.16.76.6:20000/c2cloud_repo/   ##根据实际的yum仓库地址进行修改
-enabled = 1
-gpgcheck = 0
+# vi local.repo 
+[local]
+name=local_repo
+baseurl=http://【YumHostIP】:20000/CentOS7.2/
+enabled=1
+gpgcheck=0
 ```
 
 > ```
@@ -102,7 +127,7 @@ gpgcheck = 0
 > 第三行：仓库路径。
 >
 > enabled为是否启用该仓库
-> baseurl为关键字，为本地创建的镜像仓库服务地址
+> baseurl为关键字，为本地创建的yum仓库服务地址
 >
 > 第四行：关闭rpm包的gpg校验功能。如果个人环境，建议关闭，参数值为0，如果生产环境，建议打开，参数值为1
 >
@@ -112,7 +137,7 @@ gpgcheck = 0
 配置完成后清除域名仓库缓存
 
 ```
-# yum clean all
+# yum makecache
 ```
 
 
