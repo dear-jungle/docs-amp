@@ -36,7 +36,7 @@ SELINUX=disabled
 SELINUXTYPE=targeted
 ```
 
-$ vi /etc/selinux/config
+ vi /etc/selinux/config
 
 离线环境需要先移除系统yum源配置
 ```
