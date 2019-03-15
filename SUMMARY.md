@@ -12,6 +12,7 @@
   * [镜像仓库](an-zhuang-bu-zou/jing-xiang-cang-ku.md)
   * [kubernetes安装](an-zhuang-bu-zou/kubernetesan-zhuang.md)
   * [部署应用管理门户](an-zhuang-bu-zou/bu-shu-ying-yong-ji-cheng-ping-tai.md)
+  * [镜像仓库-k8s](an-zhuang-bu-zou/jing-xiang-cang-5e93-k8s.md)
 * [卸载](xie-zai.md)
   * [卸载云平台](xie-zai/xie-zai-yun-ping-tai.md)
 * [其他](qi-ta.md)
